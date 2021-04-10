@@ -1,0 +1,87 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/zshan/github/Quantum/qchack-microsoft-challenge/Part1/Task1/Task1.csproj": {}
+  },
+  "projects": {
+    "/home/zshan/github/Quantum/qchack-microsoft-challenge/Part1/Task1/Task1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/zshan/github/Quantum/qchack-microsoft-challenge/Part1/Task1/Task1.csproj",
+        "projectName": "Task1",
+        "projectPath": "/home/zshan/github/Quantum/qchack-microsoft-challenge/Part1/Task1/Task1.csproj",
+        "packagesPath": "/home/zshan/.nuget/packages/",
+        "outputPath": "/home/zshan/github/Quantum/qchack-microsoft-challenge/Part1/Task1/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/zshan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Quantum.CSharpGeneration": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.15.2103133969, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Quantum.QSharp.Core": {
+              "target": "Package",
+              "version": "[0.15.2103133969, )"
+            },
+            "Microsoft.Quantum.Runtime.Core": {
+              "target": "Package",
+              "version": "[0.15.2103133969, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Quantum.Standard": {
+              "target": "Package",
+              "version": "[0.15.2103133969, )"
+            },
+            "Microsoft.Quantum.Xunit": {
+              "target": "Package",
+              "version": "[0.15.2103133969, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
