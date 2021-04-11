@@ -37,13 +37,84 @@ namespace QCHack.Task4 {
     // Hint: Remember that you can examine the inputs and the intermediary results of your computations
     //       using Message function for classical values and DumpMachine for quantum states.
     //
+    
+    function getTriangles(edges : (Int, Int)[]) : (Int, Int, Int)[] {
+        let n = Length(edges);
+        
+        mutable triangles = new (Int, Int, Int)[n];
+        mutable counter = 0;
+        
+        for i in 0..n-1 
+        {
+            let (a1, a2) = edges[i];
+            for j in i+1..n-1
+            {
+                let (b1, b2) = edges[j];
+                
+                // check if atleast one pair is same
+                if (a1 == b1 or a2 == b1 or a1 == b2 or a2 == b2)
+                {
+                    for k in j+1..n-1
+                    {
+                        let (c1, c2) = edges[k];
+                        
+                        // final check
+                        if ((c1 == a2 and c2 == b2) or
+                            (c1 == a1 and c2 == b2) or
+                            (c1 == a2 and c2 == b1) or
+                            (c1 == a1 and c2 == b1) or 
+                            (c2 == a2 and c1 == b2) or
+                            (c2 == a1 and c1 == b2) or
+                            (c2 == a2 and c1 == b1) or
+                            (c2 == a1 and c1 == b1))
+                        {
+                            set triangles w/= counter <- (i, j, k);
+                            set counter += 1;
+                        }
+
+                    }
+                }
+            }
+        }
+        //Console.Write(triangles);    
+        return triangles[0..counter-1];
+    }
+
+    operation task3 (inputs : Qubit[], output : Qubit) : Unit is Adj+Ctl {
+        X(inputs[0]);
+        Controlled X(inputs[0..0], inputs[1]);
+        Controlled X(inputs[0..0], inputs[2]);
+        Controlled X(inputs[1..2], output);
+        Controlled X(inputs[0..0], inputs[1]);
+        Controlled X(inputs[0..0], inputs[2]);
+        X(inputs[0]);
+        
+        X(output);
+    }
+
     operation Task4_TriangleFreeColoringOracle (
         V : Int, 
         edges : (Int, Int)[], 
         colorsRegister : Qubit[], 
         target : Qubit
     ) : Unit is Adj+Ctl {
-        // ...
+        let triangles = getTriangles(edges);
+        let len = Length(triangles);
+            
+        use qs = Qubit[len];
+    
+        for i in 0..len-1 
+        {
+            let (x, y, z) = triangles[i];
+            task3([colorsRegister[x], colorsRegister[y], colorsRegister[z]], qs[i]);
+        }
+    
+        Controlled X(qs, target);
+    
+        for i in 0..len-1 
+        {
+            let (x, y, z) = triangles[i];
+            task3([colorsRegister[x], colorsRegister[y], colorsRegister[z]], qs[i]);
+        }
     }
 }
-

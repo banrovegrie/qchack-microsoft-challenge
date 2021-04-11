@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/zshan/github/Quantum/qchack-microsoft-challenge/Part1/Task1/Task1.csproj": {}
+    "/home/alapan/Documents/Projects/QC-Hack/qchack-microsoft-challenge/Part1/Task1/Task1.csproj": {}
   },
   "projects": {
-    "/home/zshan/github/Quantum/qchack-microsoft-challenge/Part1/Task1/Task1.csproj": {
+    "/home/alapan/Documents/Projects/QC-Hack/qchack-microsoft-challenge/Part1/Task1/Task1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/zshan/github/Quantum/qchack-microsoft-challenge/Part1/Task1/Task1.csproj",
+        "projectUniqueName": "/home/alapan/Documents/Projects/QC-Hack/qchack-microsoft-challenge/Part1/Task1/Task1.csproj",
         "projectName": "Task1",
-        "projectPath": "/home/zshan/github/Quantum/qchack-microsoft-challenge/Part1/Task1/Task1.csproj",
-        "packagesPath": "/home/zshan/.nuget/packages/",
-        "outputPath": "/home/zshan/github/Quantum/qchack-microsoft-challenge/Part1/Task1/obj/",
+        "projectPath": "/home/alapan/Documents/Projects/QC-Hack/qchack-microsoft-challenge/Part1/Task1/Task1.csproj",
+        "packagesPath": "/home/alapan/.nuget/packages/",
+        "outputPath": "/home/alapan/Documents/Projects/QC-Hack/qchack-microsoft-challenge/Part1/Task1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/zshan/.nuget/NuGet/NuGet.Config"
+          "/home/alapan/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -24,6 +24,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -35,6 +36,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.Quantum.CSharpGeneration": {
               "suppressParent": "All",
@@ -74,12 +76,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }
