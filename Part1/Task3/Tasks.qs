@@ -31,6 +31,7 @@ namespace QCHack.Task3 {
         Controlled X(inputs[0..0], inputs[1]);
         Controlled X(inputs[0..0], inputs[2]);
         X(inputs[0]);
+        X(output);
     }
 }
 
